@@ -1,29 +1,10 @@
-# Backup Vault · Web
+# Web vault
 
-Passworded recovery UI. Host separately from live sites.
+Browser UI for DB IN CLOUD offline recovery.
 
-## Features
+1. Point the document root at this folder  
+2. Make `data/` writable  
+3. Use HTTPS  
+4. Complete setup in the browser  
 
-- Web setup wizard (writes `data/config.php`)
-- Multi-provider storage: Cloudflare R2, Amazon S3, Wasabi, B2, Spaces, custom
-- Native SigV4 client (no AWS SDK)
-- Site list, decrypt download, settings
-
-## Deploy
-
-1. Point document root at this folder
-2. `chmod 750 data/` (writable by PHP)
-3. HTTPS only
-4. Complete setup in the browser
-
-## Source map
-
-```
-src/
-  VaultConfig.php           # load/save settings
-  StorageProviders.php      # provider presets
-  ObjectStorageClient.php    # SigV4 GET
-  VaultClient.php           # list / decrypt / download
-views/
-  setup.php | login.php | vault.php | detail.php | settings.php
-```
+See the root README for full instructions.
