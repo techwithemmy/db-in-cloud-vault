@@ -1,0 +1,16 @@
+# Never commit live secrets
+cli/vault-secrets.php
+web/config.php
+web/data/config.php
+web/data/*.tmp.*
+web/data/*.sql*
+web/data/*.enc
+web/data/*.zip
+web/data/*.gz
+
+.DS_Store
+.idea/
+.vscode/
+*.zip
+.env
+.env.*
